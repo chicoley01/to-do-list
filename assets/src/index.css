@@ -101,13 +101,13 @@ body {
     margin: 15px;
 }
 
-.tasks {
+.task-wrapper {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.task-title {
+.task  {
     background-color: #f1f1f1;
     height: 50px;
     display: flex;
@@ -116,7 +116,7 @@ body {
     padding: 0 10px 0 10px;
 }
 
-.task-title input[type="checkbox"] {
+.task input[type="checkbox"] {
     appearance: none;
     width: 20px;
     height: 20px;
@@ -128,7 +128,7 @@ body {
     position: relative;
 }
 
-.task-title input[type="checkbox"]:checked::after {
+.task input[type="checkbox"]:checked::after {
     content: "";
     position: absolute;
     top: 0px;
@@ -140,12 +140,12 @@ body {
     transform: rotate(45deg);
 }
 
-.task-title input[type="checkbox"]:checked {
+.task input[type="checkbox"]:checked {
     background-color: #7c3aed;
     border-color: #6831c6;
 }
 
-.task-title label {
+.task label {
     font-size: 0.95rem;
     font-weight: 600;
     color: #222;
