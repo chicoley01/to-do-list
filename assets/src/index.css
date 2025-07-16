@@ -5,6 +5,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+html::selection {
+    background-color: #7c3aeda4;
+    color: #222;
+}
+
 body {
     background-color: rgb(14, 0, 14);
     display: flex;
@@ -14,8 +19,8 @@ body {
 }
 
 .main-container {
-    width: 500px;
-    height: 600px;
+    width: min(100%, 500px);
+    height: 70dvh;
     background: white;
     border-radius: 0.3em;
     display: flex;
@@ -74,6 +79,18 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+.provisorio:hover {
+    background-color: #aaa;
+    
+    .day-text {
+        font-weight: 600;
+    }
+
+    .day-number {
+        color: #222;
+    }
+}
+
 .todo-list-field {
     padding-right: 10px;
     height: 100%;
@@ -112,8 +129,26 @@ body {
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: 0.5em;
     padding: 0 10px 0 10px;
+}
+
+.task div {
+    display: flex;
+    align-items: center;
+}
+
+.task .kebab-icon {
+    opacity: 0;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #222;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.task:hover .kebab-icon {
+    opacity: 1;
 }
 
 .task input[type="checkbox"] {
@@ -173,14 +208,3 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.provisorio:hover {
-    background-color: #aaa;
-    
-    .day-text {
-        font-weight: 600;
-    }
-
-    .day-number {
-        color: #222;
-    }
-}

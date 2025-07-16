@@ -1,3 +1,5 @@
+import { createCheckbox, createKebabIcon } from './components/index.js';
+
 export function createTask() {
   const todoField = document.querySelector(".todo-list-field");
 
@@ -25,6 +27,7 @@ export function createTask() {
 
     taskGroup.appendChild(categoryTitle);
     taskGroup.appendChild(tasksWrapper);
+
     todoField.appendChild(taskGroup);
   }
 
@@ -32,10 +35,12 @@ export function createTask() {
 
   const task = document.createElement("div");
   task.classList.add("task");
-  task.innerHTML = `
-    <input type="checkbox" name="do">
-    <label>${taskName}</label>
-  `;
+
+  const checkboxDiv = createCheckbox(taskName);
+  const kebab = createKebabIcon();
+
+  task.appendChild(checkboxDiv);
+  task.appendChild(kebab);
 
   taskWrapper.appendChild(task);
 }
