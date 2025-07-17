@@ -28,7 +28,7 @@ export function createTask(event) {
       taskGroup.classList.add("task-group");
       taskGroup.setAttribute("data-category", normalizedCategory);
 
-      const categoryTitle = document.createElement("h5");
+      const categoryTitle = document.createElement("h4");
       categoryTitle.classList.add("task-category");
       categoryTitle.textContent = capitalize(category);
 

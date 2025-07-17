@@ -112,9 +112,7 @@ body {
 }
 
 .task-category {
-    color: #9a54db;
-    text-shadow: 1px 1px 2px #9a54dbaa;
-    font-family: 'JetBrains Mono';
+    color: #5f2db6;
     margin: 15px;
 }
 
