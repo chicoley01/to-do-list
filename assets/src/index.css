@@ -195,7 +195,7 @@ body {
     padding: 20px;
 }
 
-#new-task-btn {
+.new-task button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -208,3 +208,112 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.new-task:hover button {
+    background-color: #5f2db6;
+}
+
+.new-task-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.new-task-modal {
+    border: none;
+    width: min(100%, 460px);
+    max-width: 460px;
+    margin: auto;
+    padding: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.modal-header button {
+    background-color: #7c3aed;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 10px 0 10px;
+}
+
+.modal-input-wrapper label {
+    color: #222;
+}
+
+.modal-input-wrapper input {
+    height: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #222;
+    border-radius: 0.2rem;
+    padding: 0 8px;
+    background: #f8f8f8;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions .confirm {
+    background-color: #7c3aed;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.modal-actions .confirm:hover {
+    background-color: #5f2db6;
+}
+
+.modal-actions .cancel {
+    background-color: #e5e5e5;
+    color: #222;
+    font-weight: bold;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+
+.modal-actions .cancel:hover {
+    background-color: #d4d4d4;
+}

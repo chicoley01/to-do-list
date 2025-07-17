@@ -1,48 +1,68 @@
-import { createCheckbox, createKebabIcon } from './components/index.js';
+import {
+  createCheckbox,
+  createKebabIcon,
+} from "./components/index.js";
 
-export function createTask() {
-  const todoField = document.querySelector(".todo-list-field");
+export function createTask(event) {
+  event.preventDefault();
 
-  let category = prompt("Digite a categoria da tarefa:", "TRABALHO");
-  if (!category) return;
+  try {
+    const categoryInput = document.querySelector("#category-input");
+    const taskNameInput = document.querySelector("#name-input");
 
-  const normalizedCategory = category.trim().toLowerCase();
+    const category = categoryInput.value.trim();
+    const taskName = taskNameInput.value.trim();
 
-  const taskName = prompt("Digite o nome da tarefa:");
-  if (!taskName) return;
+    if (!category || !taskName) return false;
 
-  let taskGroup = document.querySelector(`[data-category="${normalizedCategory}"]`);
+    const todoField = document.querySelector(".todo-list-field");
 
-  if (!taskGroup) {
-    taskGroup = document.createElement("div");
-    taskGroup.classList.add("task-group");
-    taskGroup.setAttribute("data-category", normalizedCategory);
+    const normalizedCategory = category.toLowerCase();
 
-    const categoryTitle = document.createElement("h5");
-    categoryTitle.classList.add("task-category");
-    categoryTitle.textContent = capitalize(category);
+    let taskGroup = document.querySelector(
+      `[data-category="${normalizedCategory}"]`
+    );
 
-    const tasksWrapper = document.createElement("div");
-    tasksWrapper.classList.add("task-wrapper");
+    if (!taskGroup) {
+      taskGroup = document.createElement("div");
+      taskGroup.classList.add("task-group");
+      taskGroup.setAttribute("data-category", normalizedCategory);
 
-    taskGroup.appendChild(categoryTitle);
-    taskGroup.appendChild(tasksWrapper);
+      const categoryTitle = document.createElement("h5");
+      categoryTitle.classList.add("task-category");
+      categoryTitle.textContent = capitalize(category);
 
-    todoField.appendChild(taskGroup);
+      const tasksWrapper = document.createElement("div");
+      tasksWrapper.classList.add("task-wrapper");
+
+      taskGroup.appendChild(categoryTitle);
+      taskGroup.appendChild(tasksWrapper);
+      todoField.appendChild(taskGroup);
+    }
+
+    const taskWrapper = taskGroup.querySelector(".task-wrapper");
+
+    const task = document.createElement("div");
+    task.classList.add("task");
+
+    const checkboxDiv = createCheckbox(taskName);
+    const kebab = createKebabIcon();
+
+    task.appendChild(checkboxDiv);
+    task.appendChild(kebab);
+
+    taskWrapper.appendChild(task);
+
+    // Limpa e fecha modal
+    categoryInput.value = "";
+    taskNameInput.value = "";
+    document.querySelector("dialog").close();
+  } catch (error) {
+    console.error("Erro ao criar a tarefa:", error);
+    alert("Ocorreu um erro. Veja o console.");
   }
 
-  const taskWrapper = taskGroup.querySelector(".task-wrapper");
-
-  const task = document.createElement("div");
-  task.classList.add("task");
-
-  const checkboxDiv = createCheckbox(taskName);
-  const kebab = createKebabIcon();
-
-  task.appendChild(checkboxDiv);
-  task.appendChild(kebab);
-
-  taskWrapper.appendChild(task);
+  return false;
 }
 
 function capitalize(str) {

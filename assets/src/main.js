@@ -1,7 +1,4 @@
-import { createTask } from './scripts/createtask.js';
+import { createTask } from "./scripts/createtask.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const newTaskBtn = document.getElementById('new-task-btn');
-
-  newTaskBtn.addEventListener('click', createTask);
-});
+const form = document.querySelector("form");
+form.addEventListener("submit", createTask);
