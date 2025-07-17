@@ -1,7 +1,7 @@
 import {
   createCheckbox,
   createKebabIcon,
-} from "./components/index.js";
+} from "../components/index.js";
 
 export function createTask(event) {
   event.preventDefault();
