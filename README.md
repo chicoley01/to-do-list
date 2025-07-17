@@ -9,10 +9,10 @@ Feita com HTML, CSS e JavaScript modular, com foco em produtividade e experiênc
 
 - ✅ Adicionar tarefas com título e descrição
 - ✅ Marcar tarefas como concluídas
-- ✅ Filtrar tarefas por status
 - ✅ Criar e excluir tarefas dinamicamente
 - ✅ Interface responsiva
 - ✅ Sistema modular (cada componente separado em arquivos JS)
+- ✅ Filtrar tarefas por status (em desenvolvimento)
 - ✅ Armazenamento local (em desenvolvimento)
 - ✅ Menu kebab com opções ao passar o mouse (em desenvolvimento)
 - ✅ Popups e alertas de confirmação (em desenvolvimento)
