@@ -1,7 +1,4 @@
-import {
-  createCheckbox,
-  createKebabIcon,
-} from "../components/index.js";
+import { createCheckbox, createKebabIcon } from "../components/index.js";
 
 export function createTask(event) {
   event.preventDefault();
@@ -66,5 +63,5 @@ export function createTask(event) {
 }
 
 function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
