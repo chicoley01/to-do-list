@@ -19,6 +19,22 @@ export function generateTask(taskName) {
 
   const kebab = createKebabIcon();
 
+  const dropdown = document.createElement("ul");
+  dropdown.classList.add("dropdown", "hidden")
+
+  const editOption = document.createElement("li")
+  editOption.textContent = "Editar";
+  editOption.classList.add("edit");
+
+  const delOption = document.createElement("li")
+  delOption.textContent = "Excluir";
+  delOption.classList.add("delete");
+
+  dropdown.append(editOption);
+  dropdown.append(delOption);
+
+  kebab.appendChild(dropdown);
+
   div.appendChild(input);
   div.appendChild(label);
 

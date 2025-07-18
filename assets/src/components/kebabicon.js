@@ -1,11 +1,13 @@
 export function createKebabIcon() {
   const svgNS = "http://www.w3.org/2000/svg";
 
+  const button = document.createElement("button");
+  button.classList.add("kebab-icon");
+
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("width", "16");
   svg.setAttribute("height", "16");
   svg.setAttribute("viewBox", "0 0 24 24");
-  svg.classList.add("kebab-icon");
 
   const dot1 = document.createElementNS(svgNS, "circle");
   dot1.setAttribute("cx", "12");
@@ -26,5 +28,7 @@ export function createKebabIcon() {
   svg.appendChild(dot2);
   svg.appendChild(dot3);
 
-  return svg;
+  button.appendChild(svg);
+
+  return button;
 }
