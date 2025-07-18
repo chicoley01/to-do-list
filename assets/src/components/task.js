@@ -1,4 +1,4 @@
-import { createKebabIcon } from "./index.js";
+import { getSVG } from "./index.js";
 
 export function generateTask(taskName) {
   const taskId = `task-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
@@ -17,7 +17,8 @@ export function generateTask(taskName) {
   label.setAttribute("for", taskId);
   label.textContent = taskName;
 
-  const kebab = createKebabIcon();
+  const kebab = document.createElement("button");
+  kebab.classList.add("kebab-icon");
 
   const dropdown = document.createElement("ul");
   dropdown.classList.add("dropdown", "hidden")
@@ -33,6 +34,7 @@ export function generateTask(taskName) {
   dropdown.append(editOption);
   dropdown.append(delOption);
 
+  kebab.appendChild(getSVG("kebab"));
   kebab.appendChild(dropdown);
 
   div.appendChild(input);

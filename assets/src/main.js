@@ -1,6 +1,9 @@
+import { initComponents } from "./components/index.js";
 import { createTask } from "./scripts/createtask.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await initComponents();
+
   const todoList = document.querySelector(".todo-list-field");
   const form = document.querySelector("form");
 
