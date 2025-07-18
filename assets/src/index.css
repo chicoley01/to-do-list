@@ -247,9 +247,8 @@ body {
 
 .new-task {
     position: absolute;
-    bottom: 16px;
-    right: 16px;
-    padding: 20px;
+    bottom: 20px;
+    right: 20px;
 }
 
 .new-task button {
