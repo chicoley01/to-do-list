@@ -91,23 +91,23 @@ body {
     }
 }
 
-.todo-list-field {
+.task-list-container {
     padding-right: 10px;
     height: 100%;
     overflow-y: auto;
 }
 
-.todo-list-field::-webkit-scrollbar {
+.task-list-container::-webkit-scrollbar {
   width: 8px;
   padding: 20px;
 }
 
-.todo-list-field::-webkit-scrollbar-thumb {
+.task-list-container::-webkit-scrollbar-thumb {
   background: #b2b2b2;
   border-radius: 10px;
 }
 
-.todo-list-field::-webkit-scrollbar-thumb:hover {
+.task-list-container::-webkit-scrollbar-thumb:hover {
   background: #a5a5a5;
 }
 

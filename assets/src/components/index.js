@@ -1,3 +1,2 @@
-export { createCheckbox } from './checkbox.js';
+export { generateTask } from './task.js';
 export { createKebabIcon } from './kebabicon.js';
-export { showModal } from './modal.js';

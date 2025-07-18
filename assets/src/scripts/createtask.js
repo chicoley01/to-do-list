@@ -1,4 +1,4 @@
-import { createCheckbox, createKebabIcon } from "../components/index.js";
+import { generateTask } from "../components/index.js";
 
 export function createTask(event) {
   event.preventDefault();
@@ -39,14 +39,7 @@ export function createTask(event) {
 
     const taskWrapper = taskGroup.querySelector(".task-wrapper");
 
-    const task = document.createElement("div");
-    task.classList.add("task");
-
-    const checkboxDiv = createCheckbox(taskName);
-    const kebab = createKebabIcon();
-
-    task.appendChild(checkboxDiv);
-    task.appendChild(kebab);
+    const task = generateTask(taskName);
 
     taskWrapper.appendChild(task);
 
