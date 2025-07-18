@@ -1,8 +1,6 @@
 import { generateTask } from "../components/index.js";
 
-export function createTask(event) {
-  event.preventDefault();
-
+export function createTask() {
   try {
     const categoryInput = document.querySelector("#category-input");
     const taskNameInput = document.querySelector("#name-input");
@@ -10,7 +8,7 @@ export function createTask(event) {
     const category = categoryInput.value.trim();
     const taskName = taskNameInput.value.trim();
 
-    if (!category || !taskName) return false;
+    if (!category || !taskName) return;
 
     const todoField = document.querySelector(".todo-list-field");
 
@@ -38,23 +36,23 @@ export function createTask(event) {
     }
 
     const taskWrapper = taskGroup.querySelector(".task-wrapper");
-
     const task = generateTask(taskName);
-
     taskWrapper.appendChild(task);
 
-    // Limpa e fecha modal
     categoryInput.value = "";
     taskNameInput.value = "";
     document.querySelector("dialog").close();
   } catch (error) {
     console.error("Erro ao criar a tarefa:", error);
     alert("Ocorreu um erro. Veja o console.");
-  }
-
-  return false;
+  }   
 }
 
 function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  const words = str.split(" ");
+  const capitalizedWords = words.map(word => {
+    if(word.length === 0 ) return "";
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+  return capitalizedWords.join(" ");
 }
