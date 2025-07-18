@@ -10,11 +10,9 @@
 
 <body>
     <div class="main-container">
-        <div class="top-field">
+        <div class="container-header">
             <h1>Minhas tarefas</h1>
-            <button id="filter-button" aria-label="Filtrar tarefas">
-                <i class="fa-solid fa-filter fa-2xl" style="color: #7c3aed;"></i>
-            </button>
+            <button id="filter-btn" aria-label="Filtrar tarefas"></button>
         </div>
         <div class="date-selector">
             <div class="provisorio">
@@ -47,23 +45,22 @@
         </div>
 
         <div class="new-task">
-            <button id="new-task-btn" onclick="openModal()" aria-label="Adicionar tarefas">
-                <i class="fa-solid fa-plus fa-sm"></i>
-            </button>
+            <button id="new-task-btn" onclick="openModal()" aria-label="Adicionar tarefas"></button>
         </div>
 
         <dialog class="new-task-modal">
             <div class="modal-container">
                 <div class="modal-header">
                     <h2>Nova tarefa</h2>
-                    <button type="button" onclick="closeModal()">X</button>
+                    <button type="button" onclick="closeModal()"></button>
                 </div>
                 <form>
                     <div class="modal-input-wrapper">
                         <label for="category-input">Categoria</label>
                         <input type="text" id="category-input" required placeholder="Cotidiano" autocomplete="off">
                         <label for="name-input" class="top-space">Nome</label>
-                        <input type="text" id="name-input" required placeholder="Beber 8 copos de água" autocomplete="off">
+                        <input type="text" id="name-input" required placeholder="Beber 8 copos de água"
+                            autocomplete="off">
                     </div>
                     <div class="modal-actions">
                         <button type="button" class="cancel" onclick="closeModal()">Cancelar</button>
@@ -74,7 +71,6 @@
         </dialog>
     </div>
 
-    <script src="https://kit.fontawesome.com/c68a2c58f0.js" crossorigin="anonymous"></script>
     <script type="module" src="./assets/src/main.js"></script>
     <script>
         function openModal() {
@@ -86,4 +82,4 @@
     </script>
 </body>
 
-</html> 
+</html>

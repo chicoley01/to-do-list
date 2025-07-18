@@ -21,13 +21,13 @@ export function generateTask(taskName) {
   kebab.classList.add("kebab-icon");
 
   const dropdown = document.createElement("ul");
-  dropdown.classList.add("dropdown", "hidden")
+  dropdown.classList.add("dropdown", "hidden");
 
-  const editOption = document.createElement("li")
+  const editOption = document.createElement("li");
   editOption.textContent = "Editar";
   editOption.classList.add("edit");
 
-  const delOption = document.createElement("li")
+  const delOption = document.createElement("li");
   delOption.textContent = "Excluir";
   delOption.classList.add("delete");
 
@@ -42,6 +42,6 @@ export function generateTask(taskName) {
 
   task.appendChild(div);
   task.appendChild(kebab);
-  
+
   return task;
 }

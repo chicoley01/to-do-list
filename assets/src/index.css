@@ -30,21 +30,30 @@ body {
     position: relative;
 }
 
-.top-field {
+.container-header {
     display: flex;
     justify-content: space-between;
     padding: 20px 15px 0 15px;
 }
 
-.top-field h1 {
+.container-header h1 {
     color: #222;
 }
 
-#filter-button {
+#filter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: none;
     width: auto;
     cursor: pointer;
+}
+
+#filter-btn svg {
+    width: 30px;
+    height: 30px;
+    color: #7c3aed;
 }
 
 .date-selector {
@@ -175,33 +184,33 @@ body {
 }
 
 .dropdown li {
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-size: 14px;
-  color: #333;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    color: #333;
 }
 
 .dropdown li:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .dropdown li.edit {
-  color: #2a72f9;
-  font-weight: 500;
+    color: #2a72f9;
+    font-weight: 500;
 }
 
 .dropdown li.edit:hover {
-  background-color: #e6f0ff;
+    background-color: #e6f0ff;
 }
 
 .dropdown li.delete {
-  color: #e63946;
-  font-weight: 500;
+    color: #e63946;
+    font-weight: 500;
 }
 
 .dropdown li.delete:hover {
-  background-color: #ffe6e9;
+    background-color: #ffe6e9;
 }
 
 .task.active .dropdown {
@@ -252,12 +261,14 @@ body {
 }
 
 .new-task button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: #7c3aed;
     color: white;
-    font-size: 20px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;

@@ -1,9 +1,11 @@
-export { generateTask } from './task.js';
+export { generateTask } from "./task.js";
 
 export async function initComponents() {
   await preloadSVGs({
     kebab: "./assets/src/icons/kebab.svg",
-    plus: "./assets/src/icons/plus.svg"
+    plus: "./assets/src/icons/plus.svg",
+    close: "./assets/src/icons/close.svg",
+    filter: "./assets/src/icons/filter.svg",
   });
 }
 
