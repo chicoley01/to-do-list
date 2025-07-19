@@ -7,14 +7,25 @@ document.addEventListener("DOMContentLoaded", async () => {
   const newTaskBtn = document.getElementById("new-task-btn");
   const plusSVG = getSVG("plus");
   newTaskBtn.appendChild(plusSVG);
+  newTaskBtn.addEventListener("click", () => {
+    document.querySelector("dialog").showModal();
+  });
 
   const closeBtn = document.querySelector("div.modal-header button");
   const closeSVG = getSVG("close");
   closeBtn.appendChild(closeSVG);
+  closeBtn.addEventListener("click", () => {
+    document.querySelector("dialog").close();
+  });
 
   const filterBtn = document.getElementById("filter-btn");
   const filterSVG = getSVG("filter");
   filterBtn.appendChild(filterSVG);
+
+  const cancelBtn = document.querySelector(".cancel");
+  cancelBtn.addEventListener("click", () => {
+    document.querySelector("dialog").close();
+  });
 
   const confirmBtn = document.querySelector(".confirm");
   confirmBtn.addEventListener("click", createTask);

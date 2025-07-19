@@ -45,14 +45,14 @@
         </div>
 
         <div class="new-task">
-            <button id="new-task-btn" onclick="openModal()" aria-label="Adicionar tarefas"></button>
+            <button id="new-task-btn" aria-label="Adicionar tarefas"></button>
         </div>
 
         <dialog class="new-task-modal">
             <div class="modal-container">
                 <div class="modal-header">
                     <h2>Nova tarefa</h2>
-                    <button type="button" onclick="closeModal()"></button>
+                    <button type="button"></button>
                 </div>
                 <div class="modal-input-wrapper">
                     <label for="category-input">Categoria</label>
@@ -61,7 +61,7 @@
                     <input type="text" id="name-input" placeholder="Beber 8 copos de água" autocomplete="off" required>
                 </div>
                 <div class="modal-actions">
-                    <button type="button" class="cancel" onclick="closeModal()">Cancelar</button>
+                    <button type="button" class="cancel">Cancelar</button>
                     <button type="button" class="confirm">Confirmar</button>
                 </div>
             </div>
@@ -69,14 +69,6 @@
     </div>
 
     <script type="module" src="./assets/src/main.js"></script>
-    <script>
-        function openModal() {
-            document.querySelector("dialog").showModal();
-        }
-        function closeModal() {
-            document.querySelector("dialog").close();
-        }
-    </script>
 </body>
 
 </html>
