@@ -54,19 +54,16 @@
                     <h2>Nova tarefa</h2>
                     <button type="button" onclick="closeModal()"></button>
                 </div>
-                <form>
-                    <div class="modal-input-wrapper">
-                        <label for="category-input">Categoria</label>
-                        <input type="text" id="category-input" required placeholder="Cotidiano" autocomplete="off">
-                        <label for="name-input" class="top-space">Nome</label>
-                        <input type="text" id="name-input" required placeholder="Beber 8 copos de água"
-                            autocomplete="off">
-                    </div>
-                    <div class="modal-actions">
-                        <button type="button" class="cancel" onclick="closeModal()">Cancelar</button>
-                        <button type="submit" class="confirm">Confirmar</button>
-                    </div>
-                </form>
+                <div class="modal-input-wrapper">
+                    <label for="category-input">Categoria</label>
+                    <input type="text" id="category-input" placeholder="Cotidiano" autocomplete="off" required>
+                    <label for="name-input" class="top-space">Nome</label>
+                    <input type="text" id="name-input" placeholder="Beber 8 copos de água" autocomplete="off" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel" onclick="closeModal()">Cancelar</button>
+                    <button type="button" class="confirm">Confirmar</button>
+                </div>
             </div>
         </dialog>
     </div>

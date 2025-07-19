@@ -16,12 +16,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const filterSVG = getSVG("filter");
   filterBtn.appendChild(filterSVG);
 
-  const todoList = document.querySelector(".todo-list-field");
-  const form = document.querySelector("form");
+  const confirmBtn = document.querySelector(".confirm");
+  confirmBtn.addEventListener("click", createTask);
 
-  if (form) {
-    form.addEventListener("submit", createTask);
-  }
+  const todoList = document.querySelector(".todo-list-field");
 
   if (todoList) {
     todoList.addEventListener("click", (event) => {
