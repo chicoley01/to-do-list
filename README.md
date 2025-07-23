@@ -1,54 +1,66 @@
 ## 📝 To-Do List
-
-Uma aplicação web simples e intuitiva para gerenciamento de tarefas diárias.  
-Feita com HTML, CSS e JavaScript modular, com foco em produtividade e experiência do usuário.
-
----
-
-## 🚀 Funcionalidades
-
-- ✅ Adicionar tarefas com título e descrição
-- ✅ Marcar tarefas como concluídas
-- ✅ Criar e excluir tarefas dinamicamente
-- ✅ Interface responsiva
-- ✅ Sistema modular (cada componente separado em arquivos JS)
-- ✅ Filtrar tarefas por status (em desenvolvimento)
-- ✅ Armazenamento local (em desenvolvimento)
-- ✅ Menu kebab com opções ao passar o mouse (em desenvolvimento)
-- ✅ Popups e alertas de confirmação (em desenvolvimento)
-- ✅ Suporte a calendário dinâmico (em planejamento)
+A simple and intuitive web application for managing daily tasks.
+Built with HTML, CSS, and modular JavaScript, focused on productivity and user experience.
 
 ---
 
-## 🛠️ Tecnologias Usadas
+## 🚀 Features
+✅ Add tasks with title and description
 
-- HTML5
-- CSS3
-- JavaScript (ES Modules)
+✅ Mark tasks as completed
+
+✅ Modular system (each component in separate JS files)
+
+✅ Kebab menu with options on hover
+
+✅ Confirmation popups and alerts (in development)
+
+✅ Responsive interface (in development)
+
+✅ Filter tasks by status (in development)
+
+✅ Local storage (in development)
+
+✅ Dynamic calendar support (planned)
 
 ---
 
-## 💡 Como rodar o projeto
+## 🛠️ Technologies Used
+HTML5
 
-1. Clone o repositório
+CSS3
+
+JavaScript (ES Modules)
+
+---
+
+## 💡 How to Run the Project
+Clone the repository
 ```bash
 git clone https://github.com/chicoley01/todo-list.git
 cd todo-list
+Open the index.html file in your browser.
 ```
 
-2. Abra o arquivo index.html no seu navegador.
+> ⚠️ The project does not use frameworks or bundlers, so no dependencies need to be installed.
 
-> ⚠️ O projeto não usa frameworks nem bundlers, então não precisa instalar dependências.
+---
 
-## 🧠 Contribuições e melhorias
-Este projeto está em desenvolvimento ativo. Veja as issues abertas e contribua com:
+## 🧠 Contributions and Improvements
+This project is under active development. Check out the open issues and contribute with:
 
-- Sugestões de melhoria
-- Correções de bugs
-- Novas funcionalidades
+Suggestions for improvement
 
-## 📄 Licença
-Este projeto está sob a licença MIT.
-Sinta-se livre para usar, modificar e contribuir.
+Bug fixes
 
-Feito com 💜 por chicoley01
+New features
+
+---
+
+## 📄 License
+This project is licensed under the MIT License.
+Feel free to use, modify, and contribute.
+
+> Made by chicoley01
+
+---
