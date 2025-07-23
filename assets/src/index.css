@@ -58,52 +58,61 @@ body {
 
 .date-selector {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 0.5rem 0.25rem;
+    width: min(100%, 500px);
 }
 
-.provisorio {
+.date-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
-    border: 1px solid #aaa;
+    justify-content: center;
+    border: 1px solid #ccc;
     border-radius: 0.3em;
-    padding: 10px 5px 10px 5px;
-    width: 60px;
+    padding: 0.75rem 0.5rem;
+    min-width: 60px;
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-.provisorio .day-text {
-    width: 100%;
+.date-container:hover {
+  background-color: #e5e5e5;
+  transform: scale(1.05);
+}
+
+.week {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.day {
     font-size: 0.9rem;
+    font-weight: 400;
+    color: #888;
+    transition: all 0.2s ease;
+}
+
+.date-container:hover .week {
+    color: #111;
+    font-weight: 600;
+}
+
+.date-container:hover .day {
     color: #222;
-    transition: all 0.2s ease-in-out;
-}
-
-.provisorio .day-number {
-    width: 100%;
-    font-size: 0.8rem;
-    margin-top: 10px;
-    color: #aaa;
-    transition: all 0.2s ease-in-out;
-}
-
-.provisorio:hover {
-    background-color: #aaa;
-
-    .day-text {
-        font-weight: 600;
-    }
-
-    .day-number {
-        color: #222;
-    }
+    font-weight: 500;
 }
 
 .task-list-container {
     padding-right: 10px;
     height: 100%;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .task-list-container::-webkit-scrollbar {

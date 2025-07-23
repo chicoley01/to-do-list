@@ -1,8 +1,11 @@
 import { initComponents, getSVG } from "./components/index.js";
 import { createTask } from "./scripts/createtask.js";
+import { renderDateSelector } from "./scripts/dateselector.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await initComponents();
+
+  renderDateSelector();
 
   const newTaskBtn = document.getElementById("new-task-btn");
   const plusSVG = getSVG("plus");
